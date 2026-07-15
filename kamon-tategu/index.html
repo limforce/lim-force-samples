@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>有限会社加門建具工芸 様 | ホームページ試作のご提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#231D18;
+  --wood:#8C5A34;
+  --wood-deep:#6B4425;
+  --paper:#F6F1E7;
+  --paper-deep:#EBE2CF;
+  --line:#DDD0B4;
+  --gold:#B8925A;
+  --card:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.serif{font-family:'Shippori Mincho',serif;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+
+.proposal-banner{background:var(--ink);color:#E8DCC4;text-align:center;font-size:13px;padding:11px 16px;}
+.proposal-banner b{color:var(--gold);}
+
+header{padding:22px 0;border-bottom:1px solid var(--line);background:var(--paper);}
+.header-inner{display:flex;justify-content:space-between;align-items:center;}
+.logo{font-size:20px;font-weight:700;letter-spacing:.06em;}
+.logo span{color:var(--wood);}
+.header-contact{font-size:12.5px;color:#6B5D4A;text-align:right;}
+
+.hero{position:relative;padding:90px 0 78px;overflow:hidden;background:var(--paper);}
+.hero-inner{position:relative;max-width:680px;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--wood-deep);letter-spacing:.12em;margin-bottom:22px;font-weight:500;}
+.eyebrow::before{content:'';width:26px;height:1px;background:var(--wood-deep);}
+h1.hero-title{font-size:36px;line-height:1.6;font-weight:700;color:var(--ink);margin-bottom:26px;}
+h1.hero-title em{font-style:normal;color:var(--wood-deep);border-bottom:2px solid var(--gold);padding-bottom:2px;}
+.hero-lede{font-size:15px;color:#5C4E3C;margin-bottom:34px;max-width:540px;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:14px 30px;border-radius:2px;font-size:14.5px;font-weight:500;}
+.btn-primary{background:var(--wood-deep);color:#fff;box-shadow:0 4px 14px rgba(107,68,37,.25);}
+.btn-outline{border:1px solid var(--wood-deep);color:var(--wood-deep);}
+
+.kumiko-strip{height:64px;background:var(--paper-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background-image:repeating-linear-gradient(45deg, transparent, transparent 18px, rgba(140,90,52,.12) 18px, rgba(140,90,52,.12) 19px),
+                    repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(140,90,52,.12) 18px, rgba(140,90,52,.12) 19px);
+}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);}
+.stat{padding:26px 20px;text-align:center;border-right:1px solid var(--line);}
+.stat:last-child{border-right:none;}
+.stat b{display:block;font-family:'Shippori Mincho',serif;font-size:26px;color:var(--ink);}
+.stat span{font-size:12.5px;color:#6B5D4A;}
+
+section{padding:84px 0;}
+.section-head{margin-bottom:44px;max-width:660px;}
+.section-tag{font-size:12.5px;color:var(--wood-deep);letter-spacing:.14em;font-weight:600;margin-bottom:10px;}
+.section-head h2{font-size:27px;color:var(--ink);line-height:1.6;}
+.section-head p{margin-top:14px;color:#5C4E3C;font-size:14.5px;}
+
+.craft-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;}
+.craft-visual{aspect-ratio:1/1;background:var(--paper-deep);border:1px solid var(--line);border-radius:4px;position:relative;overflow:hidden;}
+.kumiko-pattern{width:100%;height:100%;}
+.craft-text p{font-size:14.5px;color:#5C4E3C;margin-bottom:16px;}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.gcard{background:var(--card);border:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.gcard-visual{aspect-ratio:4/3;background:linear-gradient(150deg,#E8DEC6,#D6C7A3);display:flex;align-items:center;justify-content:center;font-size:34px;opacity:.55;}
+.gcard-body{padding:16px 18px;}
+.gcard-tag{font-size:11px;color:var(--wood-deep);font-weight:600;margin-bottom:5px;letter-spacing:.04em;}
+.gcard-desc{font-size:13.5px;color:var(--ink);line-height:1.6;}
+
+.strength-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.scard{background:var(--card);border:1px solid var(--line);padding:30px 26px;border-radius:3px;}
+.snum{font-family:'Shippori Mincho',serif;font-size:13px;color:var(--gold);margin-bottom:14px;}
+.scard h3{font-size:16px;color:var(--ink);margin-bottom:10px;line-height:1.6;}
+.scard p{font-size:13.5px;color:#5C4E3C;}
+
+.founder{display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:start;background:var(--paper-deep);border-radius:4px;padding:36px;}
+.founder-visual{aspect-ratio:1;background:#DDD0B4;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:42px;}
+.founder-text h3{font-size:17px;margin-bottom:10px;}
+.founder-text p{font-size:14px;color:#5C4E3C;line-height:1.9;}
+
+.about-grid{display:grid;grid-template-columns:190px 1fr;gap:0 28px;font-size:14px;}
+.about-grid dt{color:var(--wood-deep);padding:14px 0;border-bottom:1px solid var(--line);font-weight:500;}
+.about-grid dd{padding:14px 0;border-bottom:1px solid var(--line);}
+
+.contact-band{background:var(--ink);color:#E8DCC4;text-align:center;padding:72px 28px;}
+.contact-band h2{font-size:24px;margin-bottom:16px;}
+.contact-band p{color:#C4B69A;font-size:14px;margin-bottom:34px;max-width:480px;margin-left:auto;margin-right:auto;}
+.contact-options{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+.contact-btn{border:1px solid rgba(184,146,90,.5);padding:14px 28px;border-radius:2px;font-size:14px;}
+.contact-btn.solid{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:600;}
+
+footer{padding:40px 0 50px;}
+.proposal-note{background:var(--card);border:1px dashed var(--wood);border-radius:3px;padding:24px 28px;font-size:13px;color:#5C4E3C;line-height:1.9;margin-bottom:28px;}
+.proposal-note b{color:var(--wood-deep);}
+.footer-meta{font-size:12px;color:#6B5D4A;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+
+@media (max-width:860px){
+  .stats{grid-template-columns:1fr;}
+  .stat{border-right:none;border-bottom:1px solid var(--line);}
+  .craft-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .strength-grid{grid-template-columns:1fr;}
+  .founder{grid-template-columns:1fr;}
+  .about-grid{grid-template-columns:1fr;}
+  h1.hero-title{font-size:27px;}
+}
+</style>
+</head>
+<body>
+
+<div class="proposal-banner">これは <b>lim force</b> が有限会社加門建具工芸様のために作成した<b>提案用の試作ページ</b>です（実際のサイトではありません）</div>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="logo">加門建具工芸<span>.</span></div>
+    <div class="header-contact">石川県小松市八幡丙2-58-1　TEL 0761-47-0321</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="eyebrow">加門建具工芸様への改善提案</div>
+    <h1 class="hero-title">55年続く<em>組子細工</em>の美しさを、<br>もっと伝わる形にしませんか。</h1>
+    <p class="hero-lede">現在のホームページを拝見し、石川ブランド製品にも認定された組子細工の技術や、全国100件以上の実績があるのに、その繊細な美しさが写真表現として十分に伝わりきっていないように感じました。組子の魅力を主役にした構成で、トップページだけ試作してみました。</p>
+    <div class="hero-ctas">
+      <a href="#craft" class="btn btn-primary">組子細工を見る</a>
+      <a href="#contact" class="btn btn-outline">お問い合わせ</a>
+    </div>
+  </div>
+</section>
+
+<div class="kumiko-strip"></div>
+
+<div class="stats">
+  <div class="stat"><b>55年</b><span>創業からの歴史</span></div>
+  <div class="stat"><b>100件以上</b><span>全国での施工実績</span></div>
+  <div class="stat"><b>200種以上</b><span>組子細工の文様</span></div>
+</div>
+
+<section id="craft">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">CRAFTSMANSHIP</div>
+      <h2>釘を使わない、1400年の伝統技術</h2>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-visual">
+        <svg class="kumiko-pattern" viewBox="0 0 200 200">
+          <defs>
+            <pattern id="asanoha" width="40" height="69.3" patternUnits="userSpaceOnUse">
+              <g stroke="#8C5A34" stroke-width="1" fill="none" opacity="0.55">
+                <path d="M20 0 L40 11.5 L40 34.6 L20 46.2 L0 34.6 L0 11.5 Z"/>
+                <path d="M20 0 L20 46.2 M0 11.5 L40 34.6 M40 11.5 L0 34.6"/>
+              </g>
+            </pattern>
+          </defs>
+          <rect width="200" height="200" fill="url(#asanoha)"/>
+        </svg>
+      </div>
+      <div class="craft-text">
+        <h3 style="font-size:19px;margin-bottom:16px;">組子細工とは</h3>
+        <p>釘や接着剤を一切使わず、木と木を手作業で組み上げていく技法。1/1000mm単位の精度が求められる、機械では再現できない世界です。</p>
+        <p>加門建具工芸様が扱う「モダンスリット照明」「モダン明かりテーブル」は、その技術力と独自性が認められ、<strong>石川ブランド製品</strong>として県に認定されています。</p>
+        <p>このような一つひとつのお仕事の背景にあるストーリーこそ、ホームページで最も伝えたい価値だと感じました。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper-deep);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">WORKS</div>
+      <h2>施工事例</h2>
+      <p>茶室建具から神社仏閣、店舗デザインまで。組子の文様が主役として伝わる見せ方に改善できます（画像はダミーです）。</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gcard"><div class="gcard-visual">🏮</div><div class="gcard-body"><div class="gcard-tag">石川ブランド製品認定</div><div class="gcard-desc">モダンスリット照明・明かりテーブル</div></div></div>
+      <div class="gcard"><div class="gcard-visual">⛩️</div><div class="gcard-body"><div class="gcard-tag">神社・仏閣建具</div><div class="gcard-desc">伝統様式に基づく建具製作</div></div></div>
+      <div class="gcard"><div class="gcard-visual">🍵</div><div class="gcard-body"><div class="gcard-tag">茶室建具</div><div class="gcard-desc">茶道の様式美を活かした設計</div></div></div>
+      <div class="gcard"><div class="gcard-visual">🏯</div><div class="gcard-body"><div class="gcard-tag">店舗建具デザイン</div><div class="gcard-desc">和風・洋風どちらにも調和</div></div></div>
+      <div class="gcard"><div class="gcard-visual">🪟</div><div class="gcard-body"><div class="gcard-tag">障子・欄間</div><div class="gcard-desc">組子細工を活かした意匠建具</div></div></div>
+      <div class="gcard"><div class="gcard-visual">✨</div><div class="gcard-body"><div class="gcard-tag">オリジナル文様</div><div class="gcard-desc">200種以上の技法から選択可能</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">STRENGTHS</div>
+      <h2>選ばれる3つの理由</h2>
+    </div>
+    <div class="strength-grid">
+      <div class="scard"><div class="snum">壱</div><h3>石川ブランド製品認定の技術力</h3><p>独自性・新規性が県に認められた、他にはない製品づくり。</p></div>
+      <div class="scard"><div class="snum">弐</div><h3>全国100件以上の実績</h3><p>北海道から沖縄まで、店舗・住宅・神社仏閣と幅広く対応。</p></div>
+      <div class="scard"><div class="snum">参</div><h3>徒弟制で受け継ぐ本物の技術</h3><p>55年、後継者育成に力を入れてきた確かな職人技。</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper-deep);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">MESSAGE</div>
+      <h2>代表者より</h2>
+    </div>
+    <div class="founder">
+      <div class="founder-visual">🪵</div>
+      <div class="founder-text">
+        <h3>代表　加門 進</h3>
+        <p>「日本の住宅文化である建具は、人々に心の安らぎを与えてきました。生活様式が洋風化する中でも、この伝統を途絶えさせたくない——その想いで、後継者の育成にも力を入れています。」</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">COMPANY</div>
+      <h2>会社概要</h2>
+    </div>
+    <dl class="about-grid">
+      <dt>会社名</dt><dd>有限会社 加門建具工芸</dd>
+      <dt>代表者</dt><dd>加門 進</dd>
+      <dt>所在地</dt><dd>〒923-0833 石川県小松市八幡丙2-58-1</dd>
+      <dt>電話</dt><dd>0761-47-0321</dd>
+      <dt>事業内容</dt><dd>美術工芸建具・木製一般建具・神社仏閣建具・茶室建具の設計/製造/取付/販売/保守</dd>
+      <dt>営業時間</dt><dd>8:00〜19:00（日曜定休）</dd>
+      <dt>対応エリア</dt><dd>日本全国各地</dd>
+    </dl>
+  </div>
+</section>
+
+<div class="contact-band" id="contact">
+  <div class="wrap" style="max-width:520px;">
+    <h2>お気軽にご相談ください</h2>
+    <p>CADデータや実績写真をお見せしながらご説明いたします。全国どこへでもお伺いします。</p>
+    <div class="contact-options">
+      <a href="tel:0761470321" class="contact-btn solid">電話で相談する</a>
+      <a href="mailto:info@kamon-tategu.jp" class="contact-btn">メールで相談する</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="proposal-note">
+      <b>このページについて：</b>このページは、加門建具工芸様のホームページを拝見し、「組子細工という貴重な伝統技術の魅力が、もっと伝わる形にできるのでは」と感じた点をもとに試作した提案ページです。テンプレートではなく、加門建具工芸様のために作成しました。ご不明点やご感想がございましたら、お気軽にご連絡ください。
+    </div>
+    <div class="footer-meta">
+      <span>© 有限会社加門建具工芸（試作イメージ・lim force作成）</span>
+      <span>お問い合わせ：lim force LLC. y.kuniyasu@lim-force.com</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
